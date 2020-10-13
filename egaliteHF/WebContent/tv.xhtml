@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+	<link rel="stylesheet"
+		href="#{request.contextPath}/resources/css/style.css" type="text/css" />
+
+	<link
+		href="https://fonts.googleapis.com/css2?family=Open+Sans&amp;family=Roboto&amp;display=swap"
+		rel="stylesheet" />
+	<title>Télévision</title>
+</h:head>
+<h:body>
+	<ui:include src="menu.xhtml" />
+	<section class="zone">
+		<aside class="choose">
+			<p>Ici on explique pourquoi ce schéma Lorem ipsum dolor sit amet,
+				consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+				labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+				exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+				esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+				cupidatat non proident, sunt in culpa qui officia deserunt mollit
+				anim id est laborum.</p>
+			<h:form id="formTV">
+				<h:panelGrid columns="2" cellpadding="5">
+					<p:outputLabel for="medias" value="Chaîne : " />
+					<p:selectOneMenu id="medias" value="#{barChartTv.positionTv}"
+						style="width:200px">
+						<p:ajax listener="#{barChartTv.onTvChange}" update="barmodelMedia" />
+						<f:selectItems value="#{barChartTv.tvHash}" />
+					</p:selectOneMenu>
+				</h:panelGrid>
+			</h:form>
+		</aside>
+		<p:chart type="bar" id="barmodelMedia"
+			model="#{barChartTv.barModelParTv}" style="height:300px" />
+	</section>
+	<section class="zone">
+		<aside class="choose">
+			<p>Ici on explique pourquoi ce schéma Lorem ipsum dolor sit amet,
+				consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+				labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+				exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+				esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+				cupidatat non proident, sunt in culpa qui officia deserunt mollit
+				anim id est laborum.</p>
+			<h:form id="formAnnee">
+				<h:panelGrid columns="2" cellpadding="5">
+					<p:outputLabel for="annees" value="Annee : " />
+					<p:selectOneMenu id="annees" value="#{barChartTv.annee}"
+						style="width:200px">
+						<p:ajax listener="#{barChartTv.onAnneeChange}"
+							update="barmodelAnnee" />
+						<f:selectItems value="#{barChartTv.anneesHash}" />
+					</p:selectOneMenu>
+				</h:panelGrid>
+			</h:form>
+		</aside>
+		<p:chart type="bar" id="barmodelAnnee"
+			model="#{barChartTv.barModelParAnnee}" style="height:300px" />
+	</section>
+	<ui:include src="footer.xhtml" />
+</h:body>
+</html>

@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+	<link rel="stylesheet"
+		href="#{request.contextPath}/resources/css/style.css" type="text/css" />
+
+	<link
+		href="https://fonts.googleapis.com/css2?family=Open+Sans&amp;family=Roboto&amp;display=swap"
+		rel="stylesheet" />
+	<title>Global</title>
+</h:head>
+<h:body>
+	<ui:include src="menu.xhtml" />
+
+	<p:chart type="pie" model="#{pieChart.pieModelMedia}"
+		style="width:500px;height:400px" />
+	<p:chart type="pie" model="#{pieChart.pieModelFunder}"
+		style="width:500px;height:400px" />
+	<p:chart type="pie" model="#{pieChart.pieModelAVGRadio}"
+		style="width:500px;height:400px" />
+	<p:chart type="pie" model="#{pieChart.pieModelAVGTv}"
+		style="width:500px;height:400px" />
+	<ui:include src="footer.xhtml" />
+</h:body>
+</html>

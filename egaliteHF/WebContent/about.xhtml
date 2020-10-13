@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+    xmlns:ui="http://java.sun.com/jsf/facelets">
+
+	<h:head>
+		<link rel="stylesheet"
+        href="#{request.contextPath}/resources/css/style.css" type="text/css" />
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&amp;family=Roboto&amp;display=swap" rel="stylesheet" /> 
+		<title>A propos</title>
+	</h:head>
+	<h:body>
+	
+		<ui:include src="menu.xhtml" />
+		
+		<section class="paragAbout">
+				<article class="titre">
+					<H2>Pourquoi ce site ?</H2>
+					<p>
+						Ce projet a été réalisé dans le cadre de la Préparation Opérationnelle à l’Emploi Java J2EE 2020 organisé par l’EPSI et Pôle Emploi Haut-de-France.<br />
+						Le projet consistait à développer un site Internet en utilisant du J2EE et des données d’Open Data. 
+						Il a été réalisé en dix jours. <br />
+						Nous avons récupéré les données de <a href="https://www.data.gouv.fr/fr/datasets/temps-de-parole-des-hommes-et-des-femmes-a-la-television-et-a-la-radio/" 
+							target="_blank" title="Temps de parole des hommes et des femmes à la télévision et à la radio">ce jeu de données</a> 
+							sur le site <a href="https://www.data.gouv.fr/fr/" target="_blank" title="Data Gouv">data.gouv</a>  
+							analysant le taux de paroles des femmes à la télévision et à la radio française. <br />
+							Nous avons choisi ce sujet parce que nous sommes intéressées par la représentation des femmes dans la société. 
+							Ces données, bien qu’intéressante car permettant de constater l’évolution aux fils des ans  et les  lacunes encore présentes,  
+								nous semblaient alors trop peu mis en avant par la base de données. 
+							Les données semblaient également très complètes sur le sujet et elles nous ont rapidement donné des idées de mise en forme pour les rendre plus lisible. <br />
+							Nous avons ensuite utilisé ces données pour en faire des graphiques plus faciles à analyser et à comprendre du premier coup d'oeil. 
+							Nous avons choisi de les étudier dans un premier temps en séparant les données sur les chaînes de radio et celles de télévision avant de les rassembler pour finir.<br />
+					</p>
+				</article>
+				<aside class="logo">
+				
+					<img src="#{request.contextPath}/resources/images/epsi.png"
+						 alt="Logo de l'EPSI"
+						 width="250"
+     					 height="150"></img>
+     				<img src="#{request.contextPath}/resources/images/poleemploi.png"
+						 alt="Logo de Pôle Emploi"
+						 width="150"
+     					 height="150"></img>
+     				<img src="#{request.contextPath}/resources/images/java.png"
+						 alt="Logo de Java"
+						 width="100"
+     					 height="150"></img>
+				</aside>
+		</section>
+		
+		<section class="blockabout">
+			<H2>Qui sommes-nous ?</H2>
+			<section class="about">
+				<article class="presentation">
+					<H3>Diane</H3>
+					<p>
+						Ayant travaillé pour un groupement d’aide aux personnes souffrant de déficiences intellectuelles et ayant été bénévole pour d’autres associations, 
+							Diane s’implique dans les sujet de société tel que le droit de la femme, des personnes LGBTQIA et des personnes handicapées.  
+						Elle s’est occupée de l’étude initiale des données ainsi que des accès à la base de données.
+					</p>
+				</article>
+				<article class="presentation">
+					<H3>Mara</H3>
+					<p>
+						Mara a proposé la première ce sujet. 
+						Ayant été engagée dans des associations de défense des droits des femmes, 
+							elle a tout de suite relevé l’intérêt du sujet et des données présentées. 
+						Elle a pris un rôle moteur dans l’élaboration du cahier des charges pour le site. 
+						Elle s’est également occupée entre autre de la majorité de la mise en page des pages de ce site.
+					</p>
+				</article>
+				<article class="presentation">
+					<H3>Pauline</H3>
+					<p>
+						Pauline passe son temps libre à jouer à divers jeux vidéos en équipe. 
+						Elle a su guider le groupe grâce à son savoir en j2ee et en HTML/CSS. 
+						Elle s’est occupée en autre de l’affichage des données sous forme de graphiques et des interactions avec l’utilisateur. 
+						Son chat, Kachemire, a également servi de mascotte au groupe lors du développement du site.
+					</p>
+				</article>
+			</section>
+		</section>
+		
+		<ui:include src="footer.xhtml" />
+	
+	</h:body>
+</html>

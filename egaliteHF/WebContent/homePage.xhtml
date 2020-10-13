@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+    xmlns:ui="http://java.sun.com/jsf/facelets">
+
+	<h:head>
+		<link rel="stylesheet"
+        href="#{request.contextPath}/resources/css/style.css" type="text/css" />
+        
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&amp;family=Roboto&amp;display=swap" rel="stylesheet" /> 
+		<title>Accueil</title>
+	</h:head>
+	<h:body>
+	
+		<ui:include src="menu.xhtml" />
+
+		<section class="zoneAccueil">
+		
+			<section class="sousType">
+				<article class="titre">
+					<H2>Notre site</H2>
+					<p>
+						Nous avons récupéré les données de 
+						<a href="https://www.data.gouv.fr/fr/datasets/temps-de-parole-des-hommes-et-des-femmes-a-la-television-et-a-la-radio/" target="_blank" title="Temps de parole des hommes et des femmes à la télévision et à la radio">ce jeu de données</a>
+						sur le site <a href="https://www.data.gouv.fr/fr/" target="_blank" title="Data Gouv">data.gouv</a>
+						qui répertorie le temps de parole des hommes et des femmes à la télévision et à la radio française.
+						Nous avons ensuite utilisé ces données pour en faire des graphiques plus faciles à analyser et à comprendre du premier coup d'oeil.<br />
+						Nous avons commencé par séparer les données en plusieurs catégories :
+					</p>
+				</article>
+			</section>
+			
+			<section class="blocAccueil">
+				<article>
+					<H3>Radio</H3>
+					<p>
+						Nous avons extrait les données relatives aux chaînes de radio. Elles vont, selon les chaînes, de 1995 à 2019.<br />
+						Les données sont d'abord présentées par chaînes afin d'observer l'évolution du taux de parole des femmes sur une chaîne donnée selon les années.
+						Elles sont ensuite présentées par années afin d'observer sur une année donnée la différence de taux de parole des femmes selon les chaînes.<br />
+						Cela permet de représenter l'évolution des chaînes à la fois par rapport aux années précédentes et par rapport aux autres chaînes.<br />
+						Ces données nous donne une idée de la représentation des femmes dans le paysage auditif des radios françaises.
+						On peut observer une sous-représentation des femmes, en particulier dans les chaînes sportives.
+						
+					</p>
+				</article>
+				<aside class="accueil">
+					<img src="#{request.contextPath}/resources/images/micro.jpg"
+						 alt="Un microphone de radio"
+						 width="300"
+     					 height="200"></img>
+				</aside>
+			</section>
+			
+			<section class="blocAccueil">
+				<aside class="accueil">
+					<img src="#{request.contextPath}/resources/images/camera.jpg"
+						 alt="Une caméra de télévision"
+						 width="300"
+     					 height="200"></img>
+				</aside>
+				<article>
+					<H3>Télévision</H3>
+					<p>
+						Nous avons extrait les données relative aux chaînes de télévision. Elles vont, selon les chaînes, de 2010 à 2019. Nous avons utilisé la même approche que pour la radio.<br />
+						Ainsi, les données sont d'abord présentées par chaînes afin d'observer l'évolution du taux de parole des femmes sur une chaîne donnée selon les années.
+						Elles sont ensuite présentées par années afin d'observer sur une année donnée la différence de taux de parole des femmes selon les chaînes.<br />
+						Cela permet de représenter l'évolution des chaînes à la fois par rapport aux années précédentes et par rapport aux autres chaînes.<br />
+						Ces données nous donne une idée de la représentation des femmes dans le paysage audio-visuel de la télévision française.
+						On peut de nouveau observer de manère encore plus flagrante une sous-représentation des femmes, en particulier dans les chaînes sportives avec comme exception les chaînes jugées "pour femmes".
+					</p>
+				</article>
+			</section>
+			
+			<section class="blocAccueil">
+				<article>
+					<H3>Global</H3>
+					<p>
+						Pour finir, nous avons voulu avoir une vision plus global des données. <br />
+						Afin de mieux visualiser les données, nous avons choisi de les afficher pour cette catégorie sous forme de diagramme camembert. <br />
+						Les données sont tout d'abord présentées afin d'observer la moyenne sur les données de chaque chaîne par rapport aux autres chaînes.
+						Nous avons trouvé intéressant de mettre en parallèle les données concernant les chaînes publiques et privés. 
+						Nous avons également voulu mettre en avant la différence sur les données à propos des chaînes de radio et des chaînes télévisées. <br />
+						[phrase qui explique viteuf les données observées]
+					</p>
+				</article>
+				<aside  class="accueil">
+					<img src="#{request.contextPath}/resources/images/media.jpg"
+						 alt="Différents type de média : télévision, journal, radio"
+						 width="300"
+     					 height="200"></img>
+				</aside>
+			</section>
+			
+		</section>
+		
+		<ui:include src="footer.xhtml" />
+	
+	</h:body>	
+</html>
